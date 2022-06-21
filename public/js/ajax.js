@@ -160,7 +160,7 @@ async function likeProduct(productId, url, button) {
     });
 
     const result = await response.json();
-    button.textContent = `Like ${result.likes}`;
+    button.textContent = `\xa0${result.likes}`;
 }
 
 const btnLoadmore = document.querySelector(".loadmore");
@@ -192,11 +192,11 @@ if (btnLoadmore) {
                     )}" class="info__button">
                         View
                     </a>
-                    <button class="btn btn-danger btn-like" data-url="${route(
+                    <i class="fab fa-gratipay btn-like" data-url="${route(
                         "products.like"
-                    )}" data-product-id="${product.id}">Like ${
+                    )}" data-product-id="${product.id}">\xa0${
                 product.likes
-            }</button>                     
+            }</i>                     
                 </div>
             </div>
           `;
@@ -209,11 +209,15 @@ if (btnLoadmore) {
         if (btnLike) {
             btnLike.forEach((element) => {
                 element.addEventListener("click", function () {
-                    likeProduct(
-                        element.dataset.productId,
-                        element.dataset.url,
-                        element
-                    );
+                    if (localStorage.getItem("user")) {
+                        likeProduct(
+                            element.dataset.productId,
+                            element.dataset.url,
+                            element
+                        );
+                    } else {
+                        alert("You need login to like");
+                    }
                 });
             });
         }
@@ -286,11 +290,11 @@ async function checkCategory(url) {
                     )}" class="info__button">
                         View
                     </a>
-                    <button class="btn btn-danger btn-like" data-url="${route(
+                    <i class="fab fa-gratipay btn-like" data-url="${route(
                         "products.like"
-                    )}" data-product-id="${product.id}">Like ${
+                    )}" data-product-id="${product.id}">\xa0${
                 product.likes
-            }</button>
+            }</i> 
                 </div>
             </div>
           `;
@@ -301,11 +305,15 @@ async function checkCategory(url) {
     if (btnLike) {
         btnLike.forEach((element) => {
             element.addEventListener("click", function () {
-                likeProduct(
-                    element.dataset.productId,
-                    element.dataset.url,
-                    element
-                );
+                if (localStorage.getItem("user")) {
+                    likeProduct(
+                        element.dataset.productId,
+                        element.dataset.url,
+                        element
+                    );
+                } else {
+                    alert("You need login to like");
+                }
             });
         });
     }

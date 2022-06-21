@@ -44,4 +44,14 @@
 }
 .product .product__info .button_action .info__button:hover {
   background: #0fbbe6;
+}
+.product .product__info .button_action i {
+  font-size: 30px;
+  color: #ed0505;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.product .product__info .button_action i:hover {
+  color: #bd0b0b;
 }/*# sourceMappingURL=all-products.css.map */

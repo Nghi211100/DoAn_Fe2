@@ -179,5 +179,14 @@ body .overlay .other .frgt-pass {
 body .overlay .other .sign-up {
   background: #B8F2E6;
 }
+body .overlay .other .sign-up a {
+  color: #515151;
+}
+body .overlay .other .login {
+  background: #B8F2E6;
+}
+body .overlay .other .login a {
+  color: #515151;
+}
 
 /* input[type="text"] {min-width: 250px;} *//*# sourceMappingURL=login.css.map */

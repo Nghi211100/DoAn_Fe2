@@ -17,7 +17,7 @@
             <p class="info__name">{{ $product->product_name }}</p>@foreach($product->categories as $category)<span class="badge bg-warning text-dark">{{ $category->category_name }}</span>@endforeach
             <p class="info__price">{{ $product->product_price }} VND</p>
             <div class="button_action"><a class="info__button" href="{{ route('products.detail', $product->id) }}">View</a>
-              <button class="btn btn-danger btn-like" data-url="{{ route('products.like') }}" data-product-id="{{ $product->id }}">Like {{$product->likes}}</button>
+            <i class="fab fa-gratipay btn-like" data-url="{{ route('products.like') }}" data-product-id="{{ $product->id }}">&nbsp;{{$product->likes}}</i>
             </div>
           </div>
         </div>@endforeach

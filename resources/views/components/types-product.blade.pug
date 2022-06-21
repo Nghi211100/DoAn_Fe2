@@ -19,7 +19,7 @@ x-layout
                     .button_action
                         a.info__button(href="{{ route('products.detail', $product->id) }}")
                             | View
-                        button.btn.btn-danger.btn-like(data-url="{{ route('products.like') }}" data-product-id='{{ $product->id }}') Like {{$product->likes}}
+                        i.fab.fa-gratipay(data-url="{{ route('products.like') }}" data-product-id='{{ $product->id }}') {{$product->likes}} 
             | @endforeach
         .homescreen__detail
             .detail-hidden

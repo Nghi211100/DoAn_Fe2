@@ -7,7 +7,8 @@
     &:hover {
         transform: translateY(-5px);
     }
-    .product-photo{
+
+    .product-photo {
         padding: 10px 10px;
     }
 
@@ -35,16 +36,31 @@
             font-size: 18px;
             font-weight: 600;
         }
-        .button_action{
+
+        .button_action {
             display: flex;
             justify-content: space-around;
             width: 100%;
+
             .info__button {
                 background: #262626;
                 padding: 10px 20px;
                 border-radius: 5px;
-                &:hover{
+
+                &:hover {
                     background: #0fbbe6;
+                }
+            }
+
+            i {
+                font-size: 30px;
+                color: #ed0505;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    color: #bd0b0b;
                 }
             }
         }
