@@ -1,0 +1,37 @@
+.homescreen__categories{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+@mixin resposive_991() {
+    @media #{"only screen and (max-width: 991px)"} {
+        @content;
+    }
+}
+@mixin resposive_768() {
+    @media #{"only screen and (max-width: 768px)"} {
+        @content;
+    }
+}
+@mixin resposive_490() {
+    @media #{"only screen and (max-width: 490px)"} {
+        @content;
+    }
+}
+@include resposive_991() {
+    .homescreen__categories {
+        width: 80%;
+    }
+}
+@include resposive_768() {
+    .homescreen__categories {
+        width: 100%;
+    }
+}
+@include resposive_490() {
+    .homescreen__categories {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+}

@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="{{ asset('css/login.css') }}")
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')  
+        meta(name='csrf-token' content='{{ csrf_token() }}') 
+
+        title Login
+    body 
+        .overlay
+            // con = Container  for items in the form
+            .con
+                // Start  header Content
+                header.head-form
+                    h2 Sign Up
+                    // A welcome message or an explanation of the login form
+                    p Register your account
+                // End  header Content
+                br
+                .field-set
+                    // user name
+                    span.input-item
+                        i.fa.fa-user-circle
+                    // user name Input
+                    input#txt-input.form-input(type='text' placeholder='UserName' required='')
+                    br
+                    // Password
+                    span.input-item
+                        i.fa.fa-key
+                    // Password Input
+                    input#pwd.form-input(type='password' placeholder='Password' name='password' required='')
+                    // Show/hide password
+                    span
+                        i#eye.fa.fa-eye(aria-hidden='true' type='button')
+                    br
+                    // Password write again
+                    span.input-item
+                        i.fa.fa-key
+                    // Password write again
+                    input#pwdrt.form-input(type='password' placeholder='Password Retype' name='passwordretype' required='')
+                    // Show/hide password
+                    span
+                        i#eye_two.fa.fa-eye(aria-hidden='true' type='button')
+                    br
+                    // buttons
+                    // button sign-up
+                    button.sign-up  Register  
+                .other
+                    // Sign Up button
+                    button.btn.submits.login
+                        a(href="{{route('login')}}")  Login                             
+                    // End Other the Division
+                    // End Conrainer
+                    // End Form
+        script(src="{{ asset('js/login.js') }}") 

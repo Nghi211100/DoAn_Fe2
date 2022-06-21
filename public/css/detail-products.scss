@@ -1,0 +1,48 @@
+.homescreen__detail {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  display: none;
+
+  .detail-content {
+    display: flex;
+    text-align: center;
+    padding: 3rem;
+    overflow: auto;
+    width: 700px;
+    margin: 30px auto;
+    background: white;
+    z-index: 99;
+
+    #detail-product {
+      .product-photo {
+        width: 50%;
+      }
+    }
+
+    .product__info {
+      padding: 2rem 0;
+
+      .info__name {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .info__price {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .detail-hidden {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}

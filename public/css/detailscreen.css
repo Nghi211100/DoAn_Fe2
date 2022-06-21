@@ -1,0 +1,75 @@
+.detailscreen {
+  padding: 20px;
+  background: #FFF;
+}
+.detailscreen label {
+  font-size: 20px;
+  font-weight: bold;
+}
+.detailscreen .list_comment {
+  display: flex;
+}
+.detailscreen .list_comment ul {
+  width: 100%;
+}
+.detailscreen .list_comment ul li {
+  align-items: center;
+}
+.detailscreen .list_comment ul li .username {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+.detailscreen .list_comment ul li .star .bi {
+  width: 12px;
+  height: 12px;
+}
+.detailscreen .comment {
+  padding: 40px;
+}
+.detailscreen .comment .mb-3 {
+  display: flex;
+}
+.detailscreen .comment .mb-3:nth-child(1) {
+  flex-direction: column;
+}
+.detailscreen .comment .mb-3:nth-child(1) textarea {
+  padding: 10px;
+}
+.detailscreen .comment .mb-3:nth-child(2) {
+  align-items: center;
+}
+.detailscreen .comment .rating {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  direction: rtl;
+}
+.detailscreen .comment .rating:not(:checked) > input {
+  display: none;
+}
+.detailscreen .comment #rate:not(:checked) > label {
+  cursor: pointer;
+  float: right;
+  width: 30px;
+  height: 30px;
+  display: block;
+  font-size: 26px;
+  font-weight: bolder;
+  color: rgba(255, 217, 0, 0.3);
+  text-align: center;
+}
+.detailscreen .comment #rate:not(:checked) > label:hover,
+.detailscreen .comment #rate:not(:checked) > label:hover ~ label {
+  color: rgba(255, 217, 0, 0.6);
+}
+.detailscreen .comment #rate > input:checked + label:hover,
+.detailscreen .comment #rate > input:checked + label:hover ~ label,
+.detailscreen .comment #rate > input:checked ~ label:hover,
+.detailscreen .comment #rate > input:checked ~ label:hover ~ label,
+.detailscreen .comment #rate > label:hover ~ input:checked ~ label {
+  color: rgba(255, 217, 0, 0.8);
+}
+.detailscreen .comment #rate > input:checked ~ label {
+  color: rgb(255, 217, 0);
+}/*# sourceMappingURL=detailscreen.css.map */

@@ -1,0 +1,22 @@
+.homescreen
+  h2.homescreen__title ALL PRODUCTS
+  .homescreen__product    
+    | @foreach($products as $product)
+    .product
+      img.card-img-top.product-photo(src="{{ asset('images/' . $product->product_photo) }}" alt='...' data-product-id='{{ $product->id }}')
+      .product__info
+        p.info__name {{ $product->product_name }}
+        | @foreach($product->categories as $category)
+        span.badge.bg-warning.text-dark {{ $category->category_name }}
+        | @endforeach
+        p.info__price {{ $product->product_price }} VND
+        .button_action
+          a.info__button(href="{{ route('products.detail', $product->id) }}")
+            | View
+          button.btn.btn-danger.btn-like(data-url="{{ route('products.like') }}" data-product-id='{{ $product->id }}') Like {{$product->likes}}
+    | @endforeach
+  .homescreen__detail
+    .detail-hidden
+    .detail-content
+      .detail-product
+  button.btn.btn-primary.loadmore Load more       

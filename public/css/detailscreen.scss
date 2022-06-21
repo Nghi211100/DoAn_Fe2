@@ -1,0 +1,95 @@
+.detailscreen {
+    padding: 20px;
+    background: #FFF;
+
+    label {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .list_comment {
+        display: flex;
+
+        ul {
+            width: 100%;
+
+            li {
+                align-items: center;
+
+                .username {
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family: 'Courier New', Courier, monospace;
+                }
+
+                .star {
+                    .bi {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .comment {
+        padding: 40px;
+
+        .mb-3 {
+            display: flex;
+
+            &:nth-child(1) {
+                flex-direction: column;
+
+                textarea {
+                    padding: 10px;
+                }
+            }
+
+            &:nth-child(2) {
+                align-items: center;
+
+            }
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            width: 250px;
+            direction: rtl;
+        }
+
+        .rating:not(:checked)>input {
+            display: none;
+        }
+
+        #rate:not(:checked)>label {
+            cursor: pointer;
+            float: right;
+            width: 30px;
+            height: 30px;
+            display: block;
+            font-size: 26px;
+            font-weight: bolder;
+            color: rgba(255, 217, 0, 0.3);
+            text-align: center;
+        }
+
+        #rate:not(:checked)>label:hover,
+        #rate:not(:checked)>label:hover~label {
+            color: rgba(255, 217, 0, 0.6);
+        }
+
+        #rate>input:checked+label:hover,
+        #rate>input:checked+label:hover~label,
+        #rate>input:checked~label:hover,
+        #rate>input:checked~label:hover~label,
+        #rate>label:hover~input:checked~label {
+            color: rgba(255, 217, 0, 0.8);
+        }
+
+        #rate>input:checked~label {
+            color: rgb(255, 217, 0), ;
+        }
+    }
+}
